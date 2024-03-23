@@ -1,4 +1,4 @@
-module final-project
+module github.com/zakkaizzatur/golang-dts-final-project
 
 go 1.21.1
 
