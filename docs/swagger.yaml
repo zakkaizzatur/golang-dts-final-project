@@ -1,0 +1,15 @@
+basePath: /
+info:
+  contact:
+    email: zakka.izzatur@gmail.com
+    name: API Support
+  description: In this application you can save photos or make comments on other people's
+    photos
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: MyGram API
+  version: "1.0"
+paths: {}
+swagger: "2.0"
