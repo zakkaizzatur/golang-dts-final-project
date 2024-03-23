@@ -104,9 +104,17 @@ func UpdateUser(c *gin.Context) {
 
 	User.ID = userId
 
-	user := db.Where("id", userId).First(&User)
+	err := db.Model(&User).Where("id = ?", userId).Updates(models.User{Email: User.Email, UserName: User.UserName}).Error
 
-	err := db.Model(&user).Where("id = ?", userId).Updates(models.User{Email: User.Email, UserName: User.UserName}).Error
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"err": "Bad Request",
+			"message": err.Error(),
+		})
+		return
+	}
+
+	err = db.Where("id = ?",userId).First(&User).Error
 
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
