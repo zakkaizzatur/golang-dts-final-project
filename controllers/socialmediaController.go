@@ -65,7 +65,7 @@ func GetSocialMedia(c *gin.Context){
 
 	parsedSocialMedia := parseGetAllSocialMedia(socialMedia)
 
-	c.JSON(http.StatusCreated, parsedSocialMedia)
+	c.JSON(http.StatusCreated, gin.H{"social_medias":parsedSocialMedia})
 }
 
 func UpdateSocialMedia(c *gin.Context){
