@@ -154,8 +154,8 @@ func parseGetAllComments(comments []models.Comment) []models.CommentGet {
 			Message:    comment.Message,
 			PhotoID:  comment.PhotoID,
 			UserID: comment.UserID,
-			User: models.PhotoUserGet{
-				ID:		comment.User.ID,
+			User: models.CommentUserGet{
+				ID: comment.User.ID,
 				Email:    comment.User.Email,
 				Username: comment.User.UserName,
 			},

@@ -18,7 +18,7 @@ type CommentGet struct {
 	UserID uint `json:"user_id"`
 	UpdatedAt *time.Time `json:"updated_at"`
 	CreatedAt *time.Time `json:"created_at"`
-	User PhotoUserGet `json:"user"`
+	User CommentUserGet `json:"user"`
 	Photo CommentPhotoGet `json:"photo"`
 }
 
@@ -36,6 +36,12 @@ type CommentCreated struct {
 	PhotoID uint `json:"photo_id"`
 	UserID uint `json:"user_id"`
 	CreatedAt *time.Time `json:"created_at"`
+}
+
+type CommentUserGet struct {
+	ID uint `json:"id"`
+	Email    string `json:"email"`
+	Username string `json:"username"`
 }
 
 type CommentUpdated struct {
