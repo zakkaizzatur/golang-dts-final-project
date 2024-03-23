@@ -63,11 +63,7 @@ func StartApp() *gin.Engine {
 		socialMediaRouter.DELETE("/:socialMediaId", middlewares.SocialMediaAuthorization(), controllers.DeleteSocialMedia)
 	}
 
-	swaggerRouter := r.Group("/swagger")
-
-	{
-		swaggerRouter.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
-	}
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	return r
 }
