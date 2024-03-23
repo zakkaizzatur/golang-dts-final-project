@@ -15,6 +15,16 @@ var (
 	appJSON = "application/json"
 )
 
+// UserRegister godoc
+// @Summary Create a new user
+// @Description Used as registration endpoint
+// @Tags user
+// @Accept json & form
+// @Produce json
+// @Param user body User true "User Register" 
+// @Success 200 {object} User
+// @Router /users/registration [pos]
+
 func UserRegister(c *gin.Context) {
 	db := database.GetDB()
 	contentType := helpers.GetContentType(c)

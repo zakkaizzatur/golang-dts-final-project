@@ -2,6 +2,7 @@ package models
 
 import "time"
 
+// Comment represents the model for a comment
 type Comment struct {
 	Base
 	UserID uint	`json:"user_id"`

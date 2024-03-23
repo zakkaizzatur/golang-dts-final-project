@@ -5,6 +5,8 @@ import (
 	"github.com/zakkaizzatur/golang-dts-final-project/middlewares"
 
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func StartApp() *gin.Engine {
@@ -59,6 +61,12 @@ func StartApp() *gin.Engine {
 		socialMediaRouter.PUT("/:socialMediaId", middlewares.SocialMediaAuthorization(), controllers.UpdateSocialMedia)
 	
 		socialMediaRouter.DELETE("/:socialMediaId", middlewares.SocialMediaAuthorization(), controllers.DeleteSocialMedia)
+	}
+
+	swaggerRouter := r.Group("/swagger")
+
+	{
+		swaggerRouter.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	}
 
 	return r

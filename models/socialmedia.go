@@ -2,6 +2,7 @@ package models
 
 import "time"
 
+// Social Media represents the model for a social media
 type SocialMedia struct {
 	Base
 	Name string `gorm:"not null" json:"name" form:"full_name" valid:"required~Social media name is required"`

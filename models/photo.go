@@ -2,6 +2,7 @@ package models
 
 import "time"
 
+// Photo represents the model for a photo
 type Photo struct {
 	Base
 	Title string `gorm:"not null" json:"title" form:"title" valid:"required~Title for the photo is required"`
