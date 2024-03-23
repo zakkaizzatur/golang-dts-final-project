@@ -15,14 +15,6 @@ var (
 	appJSON = "application/json"
 )
 
-// @Summary Register New User
-// @Description Register New User by Data Provided
-// @Tags Users
-// @Accept json
-// @Produce json
-// @Param mygram body models.User true "Register User"
-// @Success 200 {object} models.User
-// @Router /users/register [post]
 func UserRegister(c *gin.Context) {
 	db := database.GetDB()
 	contentType := helpers.GetContentType(c)
