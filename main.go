@@ -5,6 +5,8 @@ import (
 
 	"github.com/zakkaizzatur/golang-dts-final-project/database"
 	"github.com/zakkaizzatur/golang-dts-final-project/router"
+
+	_ "github.com/zakkaizzatur/golang-dts-final-project/docs"
 )
 
 // @title MyGram API
