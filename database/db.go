@@ -1,20 +1,22 @@
 package database
 
 import (
-	"final-project/models"
 	"fmt"
 	"log"
+	"os"
+
+	"github.com/zakkaizzatur/golang-dts-final-project/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
 var (
-	host = "localhost"
-	user = "postgres"
-	password = "postgres"
-	dbPort = "5432"
-	dbname = "final-project"
+	host = os.Getenv("PGHOST")
+	user = os.Getenv("PGUSER")
+	password = os.Getenv("PGPASSWORD")
+	dbPort = os.Getenv("PGPORT")
+	dbname = os.Getenv("PGDATABASE")
 	db *gorm.DB
 	err error
 )

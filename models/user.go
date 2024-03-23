@@ -1,7 +1,7 @@
 package models
 
 import (
-	"final-project/helpers"
+	"github.com/zakkaizzatur/golang-dts-final-project/helpers"
 
 	"github.com/asaskevich/govalidator"
 	"gorm.io/gorm"

@@ -1,10 +1,11 @@
 package controllers
 
 import (
-	"final-project/database"
-	"final-project/helpers"
-	"final-project/models"
 	"net/http"
+
+	"github.com/zakkaizzatur/golang-dts-final-project/database"
+	"github.com/zakkaizzatur/golang-dts-final-project/helpers"
+	"github.com/zakkaizzatur/golang-dts-final-project/models"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"

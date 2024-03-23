@@ -1,8 +1,8 @@
 package router
 
 import (
-	"final-project/controllers"
-	"final-project/middlewares"
+	"github.com/zakkaizzatur/golang-dts-final-project/controllers"
+	"github.com/zakkaizzatur/golang-dts-final-project/middlewares"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,8 +1,9 @@
 package middlewares
 
 import (
-	"final-project/helpers"
 	"net/http"
+
+	"github.com/zakkaizzatur/golang-dts-final-project/helpers"
 
 	"github.com/gin-gonic/gin"
 )
