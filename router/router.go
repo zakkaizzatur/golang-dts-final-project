@@ -12,15 +12,13 @@ func StartApp() *gin.Engine {
 
 	userRouter := r.Group("/users")
 	{
-		userRouter.Use(middlewares.Authentication())
-
 		userRouter.POST("/register", controllers.UserRegister)
 
 		userRouter.POST("/login", controllers.UserLogin)
 
-		userRouter.PUT("/:userId",middlewares.UserAuthorization(), controllers.UpdateUser)
+		userRouter.PUT("/:userId",middlewares.Authentication(), middlewares.UserAuthorization(), controllers.UpdateUser)
 
-		userRouter.DELETE("/:userId",middlewares.UserAuthorization(), controllers.DeleteUser)
+		userRouter.DELETE("/:userId",middlewares.Authentication(), middlewares.UserAuthorization(), controllers.DeleteUser)
 	}
 
 	photosRouter := r.Group("/photos")
