@@ -3,10 +3,10 @@ package main
 import (
 	"os"
 
+	_ "github.com/zakkaizzatur/golang-dts-final-project/docs"
+
 	"github.com/zakkaizzatur/golang-dts-final-project/database"
 	"github.com/zakkaizzatur/golang-dts-final-project/router"
-
-	_ "github.com/zakkaizzatur/golang-dts-final-project/docs"
 )
 
 // @title MyGram API
@@ -17,6 +17,7 @@ import (
 // @contact.email zakka.izzatur@gmail.com
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+// @host https://golang-dts-final-project-production.up.railway.app
 // @BasePath /
 
 func main() {
